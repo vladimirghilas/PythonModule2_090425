@@ -8,6 +8,7 @@ flat_number = int(input("flat:"))
 floor_number = math.ceil(flat_number / 5)
 
 print("Квартира", flat_number, "находится на", floor_number, "этаже")
+print(f"Квартира {flat_number} находится на {floor_number} этаже")
 
 # 1. Анализируете условие задачи
 # 2. Составление алгоритма

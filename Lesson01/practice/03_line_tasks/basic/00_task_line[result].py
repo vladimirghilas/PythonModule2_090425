@@ -6,7 +6,7 @@ perimeter = a + b + c
 p = (a + b + c) / 2
 square = (p * (p - a) * (p - b) * (p - c)) ** 0.5
 
-print("P =", perimeter)
-print("S =", square)
+print(f"P = {perimeter}")
+print(f"S = {square}")
 
 # Ctrl + Alt + L - автоформат по PEP-8
