@@ -7,4 +7,5 @@ print(pairs)
 
 # Перепишите его, используя list comprehensions:
 
-...
+pairs = [(num, num ** 2) for num in numbers]
+print(pairs)
