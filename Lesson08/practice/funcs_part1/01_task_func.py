@@ -6,8 +6,8 @@
 # Результат:
 #   площадь прямоугольника.
 
-def calculate_rectangle_area(w, h):
-    pass
+def calculate_rectangle_area(width, height):
+    return width * height
 
 
 width = int(input("width = "))
