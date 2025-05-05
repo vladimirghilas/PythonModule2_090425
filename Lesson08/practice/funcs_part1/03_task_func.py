@@ -2,7 +2,7 @@
 # Решение:
 # Оформите решение задачи в виде функции
 
-def count_vowels(text):
+def count_vowels(text: str) -> int:
     vowels = "ауоыэяюёие"
     num_vowels = 0
     for char in text.lower():
