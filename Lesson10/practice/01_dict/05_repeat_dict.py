@@ -6,4 +6,17 @@
 # Вызовите функцию для поиска товара и выведите результат.
 
 def find_item_by_name(items: list[dict], name: str) -> dict | None:
-    pass
+    for item in items:
+        if item["name"].lower() ==name.lower():
+            return item
+    return None
+items = [
+    {"name": "paints", "price": 35, "quantity": 10},
+    {"name": "hat", "price": 5, "quantity": 8},
+    {"name": "shoes", "price": 8, "quantity": 100},
+    {"name": "shirt", "price": 23, "quantity": 16}
+]
+print(find_item_by_name(items, "paints"))
+print(find_item_by_name(items, "socks"))
+print(find_item_by_name(items, "shoes"))
+

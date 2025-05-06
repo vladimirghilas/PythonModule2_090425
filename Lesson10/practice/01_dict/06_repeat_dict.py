@@ -11,7 +11,12 @@ def add_item_to_inventory(items: list[dict]) -> None:
     name = input("Введите название товара: ")
     price = float(input("Введите цену товара: "))
     quantity = int(input("Введите количество товара: "))
-    # TODO: допишите функцию
+    new_item = {
+        "name": name,
+        "price": price,
+        "quantity": quantity
+    }
+    items.append(new_item)
 
 
 inventory = [

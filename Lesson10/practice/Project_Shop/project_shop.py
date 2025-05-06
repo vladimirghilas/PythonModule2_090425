@@ -10,7 +10,9 @@ def display_menu():
     print("7. Вывести товары с количеством ниже заданного.")
     print("8. Выход. \n")
 
-
+def show_items(items: list[dict]):
+    for i, item in enumerate(items):
+        print(f"{i}name: {item["name"]}, price: {item["price"]} , quantity: {item["quantity"]}")
 # Menu
 while True:
     inventory = [
@@ -21,4 +23,6 @@ while True:
     display_menu()
     choice = input("Выберите действие: ")
 
-    ...
+    if choice == "1":
+       show_items(inventory)
+       input("Press enter to continue")

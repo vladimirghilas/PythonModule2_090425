@@ -17,4 +17,4 @@ def fibonacci(n):
         return fibonacci(n - 1) + fibonacci(n - 2)
 
 # Пример использования
-print(fibonacci(7))  # Вывод: 13
+print(fibonacci(40))  # Вывод: 13
