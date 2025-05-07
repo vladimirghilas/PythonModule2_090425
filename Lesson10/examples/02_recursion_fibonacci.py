@@ -1,3 +1,19 @@
+def cache(func):
+    _cache = {}
+
+    def wrapper(*args, **kwargs):
+        key = args, tuple(sorted(kwargs.items()))
+        if key in _cache:
+            # print(_cache)
+            return _cache[key]
+        result = func(*args, **kwargs)
+        _cache[key] = result
+        # print(_cache)
+        return result
+
+    return wrapper
+
+@cache
 def fibonacci(n):
     """
     Вычисляет n-ое число Фибоначчи.
@@ -17,4 +33,4 @@ def fibonacci(n):
         return fibonacci(n - 1) + fibonacci(n - 2)
 
 # Пример использования
-print(fibonacci(7))  # Вывод: 13
+print(fibonacci(300))  # Вывод: 13
