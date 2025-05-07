@@ -7,9 +7,17 @@
 # 2. Выведите на экран название товара и его цену, используя ключи словаря
 
 item = {
+<<<<<<< HEAD
     "name" : "paints",
     "price": 35,
     "quantity": 10
 }
+=======
+    "name": "Брюки",
+    "cost": 35,
+    "quantity": 10
+}
+
+>>>>>>> 8af6c69ec3c36c1cceefae84eb65ee6b4d851b53
 print(item)
 print(item["name"])
