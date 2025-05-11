@@ -4,11 +4,16 @@
 
 password = input("Enter password: ")
 
+if len(password) >= 6 and password.find("#") and password[0].isupper():
+
+
 # 1. Минимум 6 символов
-print(len(password))
+    print(len(password))
 
 # 2. Должен содержать спецсимвол "#"
-print(password.find("#"))
+    print(password.find("#"))
 
 # 3. Должен начинаться с большой буквы
-print(password[0].isupper())
+    print(password[0].isupper())
+else:
+    print("incorect")
