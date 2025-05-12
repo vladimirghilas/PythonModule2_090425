@@ -1,4 +1,10 @@
 # Даны координаты центров двух окружностей (x1; y1) (x2; y2) и и их радиусы  R1 и R2.
 # Находится ли одна окружность целиком внутри другой
+import math
 
-# TODO: your code here
+def distance(x1, y1, x2, y2, r1, r2):
+    distance = math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+    return "окружность целиком внутри другой" if distance <= abs(r1 - r2) else "окружность не целиком внутри другой"
+
+print(distance(2, 2, 3, 3, 6, 4.585))
+print(distance(2, 2, 3, 3, 6, 4.586))

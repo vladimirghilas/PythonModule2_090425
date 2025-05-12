@@ -33,13 +33,31 @@ items = [
 ]
 # Найдите:
 print("Товары на складе представлены брэндами: ")
-
-# TODO: your code here
+item1 = []
+for item in items:
+    if item["brand"] not in item1:
+        item1.append(item["brand"])
+print(*item1, sep=", ")
 
 print("На складе больше всего товаров брэнда(ов): ")
 
-# TODO: your code here
+more_brands = {}
+for item in items:
+    brand = item["brand"]
+    if brand in more_brands:
+        more_brands[brand] += 1
+    else:
+        more_brands[brand] = 1
+for brand in more_brands:
+    if more_brands[brand] > 1:
+        print(more_brands[brand], brand)
 
 print("На складе самый дорогой товар брэнда(ов): ")
 
-# TODO: your code here
+hight_price = {}
+price = 0
+for item in items:
+    if item["price"] > price:
+        price = item["price"]
+        hight_price = item
+print(hight_price["brand"])

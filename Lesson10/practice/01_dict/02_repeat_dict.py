@@ -6,7 +6,6 @@
 # Увеличьте количество товара на 5.
 # Измените цену товара на новую.
 # Выведите обновленный словарь на экран.
-<<<<<<< HEAD
 item = {
     "name" : "paints",
     "price": 35,
@@ -16,9 +15,6 @@ item["quantity"] += 5
 item["price"] = 32
 
 print(item)
-
-
-=======
 
 item = {
     "name": "Брюки",
@@ -30,4 +26,3 @@ item["quantity"] += 5
 item["cost"] = 32
 
 print(item)
->>>>>>> 8af6c69ec3c36c1cceefae84eb65ee6b4d851b53

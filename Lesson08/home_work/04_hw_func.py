@@ -9,6 +9,30 @@
 # Ввод: -2/3 - -2
 # Вывод: 1 1/3
 
+from fractions import Fraction
+
+def simplified_number(s):
+    f = Fraction(s)
+    f = f.limit_denominator()
+    whole = f.numerator // f.denominator
+    remainder = f - whole
+    if whole == 0:
+        return whole
+    return (f'{whole} {remainder}')
 
 
+s = input("Введите дроби для сложения или вычитания в формате 5/7+-6/9 \n")
+s = s.replace('--', '+').replace('+-', '-').replace('-+', '-')
 
+if '+' in s:
+    left, right = s.split('+', 1)
+    result = Fraction(left) + Fraction(right)
+elif '-' in s[1:]:
+    index = s[1:].index('-') + 1
+    left, right = s[:index], s[index + 1:]
+    result = Fraction(left) + Fraction(right)
+else:
+    result = s
+    Fraction(s)
+
+print(simplified_number(result))
