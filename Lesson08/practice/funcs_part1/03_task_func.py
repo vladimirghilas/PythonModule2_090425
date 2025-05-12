@@ -11,6 +11,9 @@ def count_vowels(text: str) -> int:
     return num_vowels
 
 
-print(count_vowels("мамА мыла РамУ")) # 6
-print(count_vowels("привет, как дела?")) # 5
-print(count_vowels("произвольный текст")) # 5
+assert count_vowels("мамА мыла РамУ") == 6
+assert count_vowels("привет, как дела?") == 5
+assert count_vowels("произвольный текст") == 5
+assert count_vowels("") == 0
+assert count_vowels("грпркцц прсккв") == 0
+assert count_vowels("аеоуоаииоэ") == 10
