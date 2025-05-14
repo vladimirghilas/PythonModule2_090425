@@ -2,7 +2,10 @@
 my_list = [1, 2, 3]
 index = int(input("Введите индекс: "))
 
-element = my_list[index]
+try:
+    element = my_list[index]
+except IndexError:
+    print(f"Элемент с индексом {index} не существует")
 
 # Задача: добавьте обработку исключений
 #   Если введен допустимый индекс, выведите значение по данному индексу
