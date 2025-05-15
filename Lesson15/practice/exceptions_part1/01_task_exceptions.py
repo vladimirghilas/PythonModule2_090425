@@ -3,6 +3,12 @@
 # При корректном значении, вычислите значение выражения и выведите результат.
 
 
-number = int(input("Введите целое число: "))
+while True:
+    try:
+        number = int(input("Введите целое число: "))
+        break
+    except ValueError:
+        print("Некорректное значение")
 
 result = number ** 2 - 4 * number
+print(result)
