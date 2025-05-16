@@ -18,7 +18,7 @@ items = [
     {
         "name": "Шорты",
         "brand": "puma",
-        "price": 2500
+        "price": 2700
     },
     {
         "name": "Шорты",
@@ -33,13 +33,37 @@ items = [
 ]
 # Найдите:
 print("Товары на складе представлены брэндами: ")
-
-# TODO: your code here
+item_brand = []
+for item in items:
+    if item["brand"] not in item_brand:
+        item_brand.append(item["brand"])
+print(item_brand)
 
 print("На складе больше всего товаров брэнда(ов): ")
+counts = {}
+for item in items:
+    key = item["brand"]
+    if key in counts:
+        counts[key] += 1
+    else:
+        counts[key] = 1
+for brand, count in counts.items():
+    if count >1:
+        print(brand, count)
 
-# TODO: your code here
+
+
 
 print("На складе самый дорогой товар брэнда(ов): ")
 
-# TODO: your code here
+max_price = ''
+cost = 0
+for item in items:
+    if item["price"] > cost:
+        cost = item["price"]
+        max_price = item["brand"]
+    elif item["price"] == cost:
+        max_price= max_price +" "+ item['brand']
+print(max_price)
+
+
