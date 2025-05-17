@@ -6,10 +6,9 @@ text = "hello world hello python world"
 frequency = {}
 
 for char in text:
-    if char in frequency: # уже встречали данный символ
+    if char in frequency:
         frequency[char] += 1
-    else: # символ встречаем первый раз
+    else:
         frequency[char] = 1
-
 print(frequency)
 

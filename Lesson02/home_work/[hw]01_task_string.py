@@ -1,15 +1,12 @@
 # Дан произвольный текст. Каких символов больше, точек "." или запятых ","?
 # Если точек и запятых одинаково - выведите "одинаково"
 
-text = ",Произвольный, текст.."
-
-num_comma = text.count(",")
-num_points = text.count(".")
-
-if num_comma > num_points:
-    print(",")
-elif num_comma < num_points:
-    print(".")
+text = input("введите текст ")
+punct = text.count(".")
+comma = text.count(",")
+if punct > comma:
+    print('точек больше')
+elif comma > punct:
+    print('запятых больше')
 else:
-    print("одинаково")
-
+    print('одинаково')

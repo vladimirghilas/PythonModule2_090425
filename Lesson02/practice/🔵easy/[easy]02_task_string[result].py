@@ -1,4 +1,4 @@
-name = input("Имя: ")
-surname = input("Фамилия: ")
+name = input("name")
+surname = input("surname")
 
 print(name.capitalize(), surname.capitalize())

@@ -1,9 +1,8 @@
-text = "мама мылА рАму"
+text = "мама мыаааал рАму"
 vowels = "ауоыэяюёие"
+cant = 0
+for leters in text.lower():
+    if leters in vowels:
+        cant +=1
+print(cant)
 
-num_vowels = 0
-for letter in text.lower():
-    if letter in vowels:
-        num_vowels += 1
-
-print(num_vowels)

@@ -7,6 +7,5 @@ numbers = [3, 6, 1, 8, 2, 9]
 # print(greater_than_5)
 
 # Перепишите его, используя list comprehensions:
-
-greater_than_5 = [num for num in numbers if num > 5]
-print(greater_than_5)
+greather_than_5 = [num for num in numbers if num > 5]
+print(greather_than_5)
