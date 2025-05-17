@@ -1,3 +1,6 @@
 message
 message
+<<<<<<< HEAD
 message
+=======
+>>>>>>> cfc7a9b39710a1b574d089247f0f41f4336dc744

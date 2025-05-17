@@ -12,6 +12,9 @@ with open(path, 'r', encoding='UTF-8') as f:
             s += int(line)
         except ValueError:
             pass
+<<<<<<< HEAD
 
+=======
+>>>>>>> cfc7a9b39710a1b574d089247f0f41f4336dc744
 
 print(s)
