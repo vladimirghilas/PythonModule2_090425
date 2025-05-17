@@ -12,7 +12,11 @@ list1 = ["камень", "ножницы", "бумага"]
 choise_comp = random.choice(list1)
 choise_pers =("сделай свой выбор: 1:камень 2:ножницы 3:бумага")
 =======
+<<<<<<< HEAD
 >>>>>>> afc805d945eea0ba1b7417347f6bb8cd93ab8091
+=======
+>>>>>>> edff1afe7cf57e833d31e25131a00c7047c43c8c
+>>>>>>> patch3
 
 def winner_rock_paper_scissors(player_choice: str, comp_choice: str) -> str:
     """

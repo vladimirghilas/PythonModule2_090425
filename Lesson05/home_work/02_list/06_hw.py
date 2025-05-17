@@ -33,11 +33,19 @@ items = [
 ]
 # Найдите:
 print("Товары на складе представлены брэндами: ")
+<<<<<<< HEAD
 item_brand = []
 for item in items:
     if item["brand"] not in item_brand:
         item_brand.append(item["brand"])
 print(item_brand)
+=======
+item1 = []
+for item in items:
+    if item["brand"] not in item1:
+        item1.append(item["brand"])
+print(*item1, sep=", ")
+>>>>>>> patch3
 
 print("На складе больше всего товаров брэнда(ов): ")
 counts = {}
@@ -53,6 +61,7 @@ for brand, count in counts.items():
 
 
 
+<<<<<<< HEAD
 
 print("На складе самый дорогой товар брэнда(ов): ")
 
@@ -67,3 +76,25 @@ for item in items:
 print(max_price)
 
 
+=======
+more_brands = {}
+for item in items:
+    brand = item["brand"]
+    if brand in more_brands:
+        more_brands[brand] += 1
+    else:
+        more_brands[brand] = 1
+for brand in more_brands:
+    if more_brands[brand] > 1:
+        print(more_brands[brand], brand)
+
+print("На складе самый дорогой товар брэнда(ов): ")
+
+hight_price = {}
+price = 0
+for item in items:
+    if item["price"] > price:
+        price = item["price"]
+        hight_price = item
+print(hight_price["brand"])
+>>>>>>> patch3

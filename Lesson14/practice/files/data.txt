@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 first string
+=======
+first stirng
+>>>>>>> patch3
 привет
 by
