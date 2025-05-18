@@ -5,8 +5,13 @@ import time
 
 
 def timer(func):
-    # Ваш код здесь
-    pass
+    def wrapper(*args,**kwargs):
+        start = time.time()
+        func(*args, **kwargs)
+        end = time.time()
+        print(f'result is {end - start:.4f} seconds')
+        return func
+    return wrapper
 
 
 @timer

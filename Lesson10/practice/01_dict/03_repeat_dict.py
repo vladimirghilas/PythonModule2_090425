@@ -9,6 +9,7 @@ item = {
     "quantity": 10
 }
 item["brand"] = "abibas"
+print(item)
 
 item = {
     "name": "Брюки",

@@ -9,12 +9,6 @@
 # Ввод: -2/3 - -2
 # Вывод: 1 1/3
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> patch3
 from fractions import Fraction
 
 def simplified_number(s):
@@ -25,10 +19,6 @@ def simplified_number(s):
     if whole == 0:
         return whole
     return (f'{whole} {remainder}')
-<<<<<<< HEAD
->>>>>>> patch-1
-=======
->>>>>>> patch3
 
 
 s = input("Введите дроби для сложения или вычитания в формате 5/7+-6/9 \n")

@@ -19,7 +19,7 @@ def add_item(inventory):
         try:
             # TODO-1: добавьте обработку ввода некорректного количества товаров (по аналогии с ценой)
             quantity = int(input("Введите количество товара: "))
-            if price <= 0:
+            if quantity <= 0:
                 print("Ошибка: Количество  должно быть положительным числом.")
             else:
                 break
@@ -109,9 +109,6 @@ def display_below_price(inventory):
             if price_limit < 0:
                 print("Ошибка: Цена не может быть отрицательной.")
             else:
-                for i, item in enumerate(inventory["price"]):
-                    if item["price"] < price_limit:
-                        print(f"Название: {item['name']}, Цена: {item['price']}, Количество: {item['quantity']}")
                 break
         except ValueError:
             print("Ошибка: Введите корректное число для цены.")

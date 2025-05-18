@@ -13,4 +13,4 @@ item = {
 }
 
 print(item)
-print(item["name"])
+print(item["name"], item["price"])
