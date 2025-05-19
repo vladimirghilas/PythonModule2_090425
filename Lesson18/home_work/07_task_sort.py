@@ -11,3 +11,15 @@
 # 10 1 3 4 3 5 6 7 7 6 1
 # Выход
 # 5
+data = [10, 1, 3, 4, 3, 5, 6, 7, 7, 6, 1]
+#data = list(map(int, input("enter n > 100 participants and their result").split()))
+nr_part = data[0]
+results = data[1:]
+     # убираем дубликаты и сортируем по убыванию
+uniq_rez = sorted(set(results), reverse=True)
+first_3 = uniq_rez[0:3]
+# добавь 1 если пройдясь по списку ты нашел эти элементы среди первых трех
+count = sum(1 for el in results if el in first_3)
+print(count)
+
+#Vladimr Ghilas
