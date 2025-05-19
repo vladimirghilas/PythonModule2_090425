@@ -15,16 +15,17 @@ def add_item(inventory):
         except ValueError:
             print("Ошибка: Введите корректное число для цены.")
 
+    # TODO-1(complete): добавьте обработку ввода некорректного количества товаров (по аналогии с ценой)
     while True:
         try:
-            # TODO-1: добавьте обработку ввода некорректного количества товаров (по аналогии с ценой)
             quantity = int(input("Введите количество товара: "))
             if quantity <= 0:
-                print("Ошибка: Количество  должно быть положительным числом.")
+                print("Ошибка: Цена должна быть положительным числом.")
             else:
                 break
         except ValueError:
-            print("Ошибка: Введите корректное число для количества товара.")
+            print("Ошибка: Введите корректное число для количества.")
+
     inventory.append({"name": name, "price": price, "quantity": quantity})
     print(f"Товар '{name}' успешно добавлен.")
 
@@ -90,10 +91,16 @@ def search_item(inventory):
         print("Товары не найдены.")
 
 
+
 def display_inventory(inventory):
     """Выводит список всех товаров."""
-    # TODO-3: если в списке нет товаров, выведите "Инвентарь пуст"
+    # TODO-3(complete): если в списке нет товаров, выведите "Инвентарь пуст"
     print("Список товаров:")
+    # if len(inventory) == 0:
+    if not inventory:
+        print("Инвентарь пуст")
+        return
+
     for i, item in enumerate(inventory):
         if item in inventory:
             print(f"{i + 1}. Название: {item['name']}, Цена: {item['price']}, Количество: {item['quantity']}")
@@ -154,7 +161,7 @@ def main():
         '5': search_item,
         '6': display_below_price,
         '7': display_below_quantity
-    }
+
     while True:
         print("\nМеню:")
         print("1. Показать список товаров.")
@@ -167,6 +174,7 @@ def main():
         print("8. Выход.")
 
         choice = input("Выберите операцию: ")
+
         # TODO-0: реализуйте выбор пунктов меню, используя словарь menu_options = {}
         if choice == '8':
             print("Завершение работы программы.")
@@ -175,6 +183,8 @@ def main():
             menu[choice](inventory)
         else:
             print("Некорректный ввод. Пожалуйста, выберите операцию из меню.")
+
+
 
 
 if __name__ == "__main__":
