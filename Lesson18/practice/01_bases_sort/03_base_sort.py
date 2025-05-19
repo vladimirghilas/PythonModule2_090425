@@ -1,0 +1,28 @@
+# Все алгоритмы сортировки из examples/ оберните в функции
+
+def bubble_sort(num: list[int]):
+    pass
+
+
+def sort_choice():
+    pass
+
+
+def quick_sort():
+    pass
+
+
+# Напишите функцию для заполнения списка случайными числами
+def gen_list(size, at=-100, to=100):
+    import random
+    return [random.randint(at, to,) for _ in range(size)]
+
+    """
+    :param size: кол-во элементов списка
+    :param at: минимально возможное значение элементов
+    :param to: максимально возможное значение элементов
+    :return: список из size произвольных элементов в диапазоне at..to 
+    """
+    pass
+
+# протестируйте функции сортировки, используя gen_list() для создания сортируемых списков

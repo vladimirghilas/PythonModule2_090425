@@ -15,6 +15,7 @@ def add_item(inventory):
         except ValueError:
             print("Ошибка: Введите корректное число для цены.")
 
+<<<<<<< HEAD
     while True:
         try:
             # TODO-1: добавьте обработку ввода некорректного количества товаров (по аналогии с ценой)
@@ -25,6 +26,19 @@ def add_item(inventory):
                 break
         except ValueError:
             print("Ошибка: Введите корректное число для количества товара.")
+=======
+    # TODO-1(complete): добавьте обработку ввода некорректного количества товаров (по аналогии с ценой)
+    while True:
+        try:
+            quantity = int(input("Введите количество товара: "))
+            if quantity <= 0:
+                print("Ошибка: Цена должна быть положительным числом.")
+            else:
+                break
+        except ValueError:
+            print("Ошибка: Введите корректное число для количества.")
+
+>>>>>>> 8a7c101c2873e5477ed0cbe3e4dbb640f6c937d6
     inventory.append({"name": name, "price": price, "quantity": quantity})
     print(f"Товар '{name}' успешно добавлен.")
 
@@ -90,10 +104,16 @@ def search_item(inventory):
         print("Товары не найдены.")
 
 
+
 def display_inventory(inventory):
     """Выводит список всех товаров."""
-    # TODO-3: если в списке нет товаров, выведите "Инвентарь пуст"
+    # TODO-3(complete): если в списке нет товаров, выведите "Инвентарь пуст"
     print("Список товаров:")
+    # if len(inventory) == 0:
+    if not inventory:
+        print("Инвентарь пуст")
+        return
+
     for i, item in enumerate(inventory):
         if item in inventory:
             print(f"{i + 1}. Название: {item['name']}, Цена: {item['price']}, Количество: {item['quantity']}")
@@ -156,7 +176,11 @@ def main():
         '4': update_item,
         '5': search_item,
         '6': display_below_price,
+<<<<<<< HEAD
         '7': display_below_quantity
+=======
+        '7': display_below_quantity,
+>>>>>>> 8a7c101c2873e5477ed0cbe3e4dbb640f6c937d6
     }
     while True:
         print("\nМеню:")
@@ -170,6 +194,7 @@ def main():
         print("8. Выход.")
 
         choice = input("Выберите операцию: ")
+<<<<<<< HEAD
         # TODO-0: реализуйте выбор пунктов меню, используя словарь menu_options = {}
         if choice == '8':
             print("Завершение работы программы.")
@@ -178,6 +203,16 @@ def main():
             menu[choice](inventory)
         else:
             print("Некорректный ввод. Пожалуйста, выберите операцию из меню.")
+=======
+        # TODO-0(complete): реализуйте выбор пунктов меню, используя словарь menu_options = {}
+        if choice == '8':
+            print("Завершение работы программы.")
+            break
+        try:
+            menu[choice](inventory)
+        except KeyError:
+            print("Выбран несуществующий пункт")
+>>>>>>> 8a7c101c2873e5477ed0cbe3e4dbb640f6c937d6
 
 
 if __name__ == "__main__":
