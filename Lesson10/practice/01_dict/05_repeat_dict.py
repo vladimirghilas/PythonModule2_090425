@@ -7,9 +7,11 @@
 
 def find_item_by_name(items: list[dict], name: str) -> dict | None:
     for item in items:
-        if item["name"].lower() ==name.lower():
+        if item["name"].lower() == name.lower():
             return item
     return None
+
+
 items = [
     {"name": "paints", "price": 35, "quantity": 10},
     {"name": "hat", "price": 5, "quantity": 8},
@@ -20,10 +22,10 @@ print(find_item_by_name(items, "paints"))
 print(find_item_by_name(items, "socks"))
 print(find_item_by_name(items, "shoes"))
 
-#if item["name"].lower() == name.lower():
+# if item["name"].lower() == name.lower():
 #    return item
 
-#return None
+# return None
 
 items = [
     {"name": "Брюки", "cost": 35, "quantity": 10},

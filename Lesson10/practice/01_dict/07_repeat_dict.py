@@ -10,7 +10,13 @@
 def remove_item_from_inventory(items: list[dict]) -> None:
     """Удаляет товар из инвентаря по названию с вводом данных внутри функции."""
     name = input("Введите название товара для удаления: ")
-    # TODO: допишите функцию
+    for i, item in enumerate(items):
+        if item["name"].lower() == name.lower():
+            del items[i]
+            print("Товар был удален")
+            break
+    else:
+        print("Товар не найден")
 
 
 inventory = [

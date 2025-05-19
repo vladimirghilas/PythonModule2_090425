@@ -4,9 +4,6 @@
 
 import time
 
-from tmp.demo_fileter import result
-
-
 def cache(func):
     _cache = {}
 
@@ -24,9 +21,9 @@ def cache(func):
 
 
 @cache
-def expensive_calculation(n):
+def expensive_calculation(n, m=1):
     time.sleep(2)
-    return n * n
+    return n * m
 
 
 print(expensive_calculation(5))

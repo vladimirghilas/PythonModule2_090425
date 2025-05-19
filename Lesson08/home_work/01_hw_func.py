@@ -2,7 +2,6 @@
 # Решение реализовать в виде функции.
 # Билет считается счастливым, если сумма его первых и последних цифр равны.
 
-<<<<<<< HEAD
 def lucky_ticket(ticket_number):
     ticket_number_str = str(ticket_number)
     if len(ticket_number_str) != 6:
@@ -36,8 +35,6 @@ def lucky_ticket_v2(ticket_number):
 
     return sum_part1 == sum_part2
 
-
-=======
 def lucky_ticket(n):
     string = str(n)
     i = 0
@@ -53,7 +50,7 @@ def lucky_ticket(n):
         elif i == len(string) - 1 or i == len(string):
             first2 = first2 + m
     return "Счастливый билет" if first2 == last2 else "Обычный билет"
->>>>>>> patch-1
+
 
 #n = int(input("Введите номер "))
 # Тестируем функцию

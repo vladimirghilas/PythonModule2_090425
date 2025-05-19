@@ -5,7 +5,6 @@
 # При решении задачи необходимо использовать функцию расстояния между двумя точками.
 import math
 
-<<<<<<< HEAD
 def distance(x1, y1, x2, y2):
     return math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
 
@@ -29,7 +28,7 @@ else:
     print(f"Самый короткий отрезок: AC ({ac})")
 
 print("Самый короткий отрезок:", ...)  # Выводим название отрезка, например “АС”.
-=======
+
 def distance(xa, ya, xb, yb, xc, yc):
     AB = math.sqrt((xa - xb) ** 2 + (ya - yb) ** 2)
     BC = math.sqrt((xb - xc) ** 2 + (yb - yc) ** 2)
@@ -39,4 +38,4 @@ def distance(xa, ya, xb, yb, xc, yc):
     return min_key
 
 print("Самый короткий отрезок:",  distance(2, 4, 2, 9, 5, 7))  # Выводим название отрезка, например “АС”.
->>>>>>> patch-1
+
