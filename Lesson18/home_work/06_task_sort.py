@@ -13,3 +13,11 @@
 # 70
 # Пояснение:
 # Возможен такой порядок: 10 2 50 1 10
+import math
+prices = [2, 1, 10, 50, 10]
+prices.sort(reverse=True)
+print(prices)
+l = math.ceil(len(prices)/2)
+print(sum(prices[0:l]))
+
+#Vladimir Ghilas
