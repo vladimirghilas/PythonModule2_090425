@@ -5,3 +5,6 @@
 
 logs = ["info: Server started", "log_error: File not found", "warning: Low disk space", "log_debug: Variable x = 5"]
 prefix = "log_"
+
+result = list(filter(lambda s: s.startswith(prefix), logs))
+print(result)
