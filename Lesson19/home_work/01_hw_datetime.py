@@ -4,9 +4,9 @@
 # и возвращает True, если этот год является началом нового тысячелетия (например, 2001),
 # и False в противном случае.
 
+
 def is_millennium_start(year: int) -> bool:
-    if year%10 == 1:
-        return True
+        return year%1000 == 1
 
 # Пример использования
 year1 = 2001
