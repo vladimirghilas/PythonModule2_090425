@@ -16,4 +16,4 @@ def cache(func):
 @cache
 def expencive_calc(n, m=1):
     return n*m
-print(expencive_calc(5))
+print(expencive_calc(10))

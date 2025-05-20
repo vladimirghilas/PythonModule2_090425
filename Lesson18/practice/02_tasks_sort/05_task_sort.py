@@ -12,17 +12,17 @@ staff = [
     },
     {
         'name': 'Иван',
-        'surname': 'Павлов',
+        'surname': 'Арбузов',
         'salary': 34500
     },
     {
         'name': 'Василий',
         'surname': 'Кукушкин',
-        'salary': 162500
+        'salary': 34500
     },
     {
         'name': 'Василий',
-        'surname': 'Павлов',
+        'surname': 'Баранов',
         'salary': 34500
     },
 ]
@@ -30,6 +30,9 @@ staff = [
 # 1. Выведите список сотрудников, отсортированный по уменьшению их заработной платы.
 # Если у нескольких сотрудников одинаковая ЗП, то добавьте сортировку по Фамилии
 print("Список сотрудников отсортированный по уменьшению ЗП:")
+staff.sort(key=lambda emp: (-emp["salary"], emp["surname"]))
+for emp in staff:
+    print(f"{emp['name']} {emp['surname']} {emp['salary']}")
 
 staff.sort(key=lambda emp: (-emp['salary'], emp['surname']))
 for emp in staff:

@@ -6,9 +6,6 @@
 
 numbers = [-2.5, 13.6, -13, -22.4, -12.8, -6.7, 12.8, -21, 4, 21.1, 0]
 
-numbers.sort(reverse = True, key = abs)
+numbers.sort(reverse=True, key=abs)
 
-sum = 0
-for el in range(5):
-    sum = sum + numbers[el]
-print(sum)
+print(sum(numbers[:5]))
