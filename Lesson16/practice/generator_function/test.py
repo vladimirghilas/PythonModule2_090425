@@ -29,4 +29,4 @@ def log(func):
     def wrapper(*args, **kwargs):
         print(f"вызвана функция {func.__name__}")
         return func(*args, **kwargs)
-        return wrapper
+    return wrapper

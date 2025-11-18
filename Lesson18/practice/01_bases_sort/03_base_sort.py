@@ -5,6 +5,7 @@ def benchmark(iters=1):
 
         def wrapper(*args, **kwargs):
             total = 0
+            return_value = None
             for i in range(iters):
                 start = time.time()
                 return_value = func(*args, **kwargs)

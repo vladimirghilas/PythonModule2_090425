@@ -15,18 +15,6 @@ def add_item(inventory):
         except ValueError:
             print("Ошибка: Введите корректное число для цены.")
 
-<<<<<<< HEAD
-    while True:
-        try:
-            # TODO-1: добавьте обработку ввода некорректного количества товаров (по аналогии с ценой)
-            quantity = int(input("Введите количество товара: "))
-            if quantity <= 0:
-                print("Ошибка: Количество  должно быть положительным числом.")
-            else:
-                break
-        except ValueError:
-            print("Ошибка: Введите корректное число для количества товара.")
-=======
     # TODO-1(complete): добавьте обработку ввода некорректного количества товаров (по аналогии с ценой)
     while True:
         try:
@@ -38,7 +26,6 @@ def add_item(inventory):
         except ValueError:
             print("Ошибка: Введите корректное число для количества.")
 
->>>>>>> 8a7c101c2873e5477ed0cbe3e4dbb640f6c937d6
     inventory.append({"name": name, "price": price, "quantity": quantity})
     print(f"Товар '{name}' успешно добавлен.")
 
@@ -173,11 +160,7 @@ def main():
         '4': update_item,
         '5': search_item,
         '6': display_below_price,
-<<<<<<< HEAD
-        '7': display_below_quantity
-=======
         '7': display_below_quantity,
->>>>>>> 8a7c101c2873e5477ed0cbe3e4dbb640f6c937d6
     }
     while True:
         print("\nМеню:")
@@ -191,16 +174,6 @@ def main():
         print("8. Выход.")
 
         choice = input("Выберите операцию: ")
-<<<<<<< HEAD
-        # TODO-0: реализуйте выбор пунктов меню, используя словарь menu_options = {}
-        if choice == '8':
-            print("Завершение работы программы.")
-            break
-        elif choice in menu:
-            menu[choice](inventory)
-        else:
-            print("Некорректный ввод. Пожалуйста, выберите операцию из меню.")
-=======
         # TODO-0(complete): реализуйте выбор пунктов меню, используя словарь menu_options = {}
         if choice == '8':
             print("Завершение работы программы.")
@@ -209,7 +182,6 @@ def main():
             menu[choice](inventory)
         except KeyError:
             print("Выбран несуществующий пункт")
->>>>>>> 8a7c101c2873e5477ed0cbe3e4dbb640f6c937d6
 
 
 if __name__ == "__main__":

@@ -34,7 +34,4 @@ staff.sort(key=lambda emp: (-emp["salary"], emp["surname"]))
 for emp in staff:
     print(f"{emp['name']} {emp['surname']} {emp['salary']}")
 
-staff.sort(key=lambda emp: (-emp['salary'], emp['surname']))
-for emp in staff:
-    print(f"{emp ['name']},{emp['surname']},{emp['salary']}")
 # 2. Найдите сумму зарплат трех самых низкооплачиваемых сотрудников:

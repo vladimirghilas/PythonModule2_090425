@@ -13,12 +13,10 @@ def is_prime(num):
 
 
 def prime_numbers_up_to(n):
-    """
-    Генератор, выдающий простые числа до n.
-    """
-    # Допишите ваш код здесь
-    pass
+    for i in range(2, n+1):
+        if is_prime(i):
+            yield i
 
 # Пример использования:
-# for prime in prime_numbers_up_to(20):
-#     print(prime) # Ожидаемый вывод: 2 3 5 7 11 13 17 19
+for prime in prime_numbers_up_to(20):
+    print(prime) # Ожидаемый вывод: 2 3 5 7 11 13 17 19

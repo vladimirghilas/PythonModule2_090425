@@ -6,6 +6,15 @@
 from datetime import date
 
 
-def get_today_day_name(today: date) -> str:
-    """Возвращает название сегодняшнего дня недели на русском языке."""
-    pass
+def get_today_day_name() -> str:
+    days = {1: "понедельник",
+            2: "вторник",
+            3: "среда",
+            4: "четверг",
+            5: "пятница",
+            6: "суббота",
+            7: "воскресенье"}
+    today = date.today().isoweekday()
+    return days[today]
+
+print("сегодня", get_today_day_name())

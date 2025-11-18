@@ -5,3 +5,9 @@
 
 logs = ["info: Server started", "log_error: File not found", "warning: Low disk space", "log_debug: Variable x = 5"]
 prefix = "log_"
+logs1 = []
+for el in logs:
+    if el.startswith(prefix):
+        logs1.append(el)
+
+print(logs1)
